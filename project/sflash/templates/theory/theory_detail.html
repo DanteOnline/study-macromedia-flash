@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% load bbcode_tags %}
+{% block main %}
+    <h1>{{object.name}}</h1>
+    {% for c in object.get_children %}
+        <h2 id="{{c.pk}}">{{c.name}}</h2>
+        {{c.text|bbcode|safe}}
+        {% if c.is_middle %}
+            {% for cc in c.get_children %}
+                <h3>{{cc.name}}</h3>
+                {{cc.text|bbcode|safe}}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    <div class="but">
+        <a href="{{object.tfile.url}}" class="btn btn-info">Скачать теорию .docx</a>
+    </div>
+{% endblock %}

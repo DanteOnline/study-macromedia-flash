@@ -1,3 +1,4 @@
 Django==1.9.7
 django-cleanup
 Pillow
+django-precise-bbcode

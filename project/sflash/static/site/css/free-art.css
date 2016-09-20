@@ -1,0 +1,61 @@
+/*.dropdown:hover > .dropdown-menu {
+    display: block;
+}*/
+
+.open_left {
+    top: 0;
+    left: 100%;
+}
+
+.caret_right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-left: 4px solid ;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.list-group-item-sub {
+    padding-left: 40px;
+    background-color: #fff;
+}
+
+.left_img {
+    width: 50%;
+    float: left;
+}
+
+.right_img {
+    width: 50%;
+    float: right;
+}
+
+.honeypot
+{
+    display: none;
+}
+
+.he-picts {
+    height: 350px;
+}
+
+.he-picts450 {
+    height: 450px;
+}
+
+.left_menu {
+    list-style-type: none;
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0;
+}
+
+.img_desc {
+    text-align: center;
+}
+
+.but {
+    padding-top: 40px;
+}

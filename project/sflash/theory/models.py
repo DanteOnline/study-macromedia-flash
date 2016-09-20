@@ -6,6 +6,10 @@ class Theory(models.Model):
     name = models.CharField(max_length=200, unique=True)
     text = models.TextField(null=True, blank=True)
     parent = models.ForeignKey('self',null=True,blank=True)
+    tfile = models.FileField(upload_to='tfiles', null=True, blank=True)
+
+    def get_name(self):
+        return self.name.title()
 
     @staticmethod
     def get_top_list():

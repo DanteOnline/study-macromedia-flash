@@ -23,4 +23,4 @@ urlpatterns = [
     url(r'^theory/', include('theory.urls')),
     url(r'^', include('main.urls')),
     url(r'^test/', include('ttest.urls'))
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

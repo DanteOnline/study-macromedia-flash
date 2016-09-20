@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block main %}
+    {% for object in object_list %}
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p><h3>{{object.name}}</h3></p>
+                </div>
+                <div class="ratings">
+                    <p>
+                        <a href="{{object.mfile.url}}" class="btn btn-primary">Скачать</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock%}

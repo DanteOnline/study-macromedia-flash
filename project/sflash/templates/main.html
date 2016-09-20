@@ -18,10 +18,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        <a href="{% url "index" %}">Главная</a>
+                    </li>
+                    <li>
                         <a href="{% url "theory" pk=1 %}">Теория</a>
                     </li>
                     <li>
                         <a href="{% url "test_index" %}">Тесты</a>
+                    </li>
+                    <li>
+                        <a href="{% url "material" %}">Материалы</a>
                     </li>
                 </ul>
             </div>
@@ -31,50 +37,8 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <!--<p class="lead">{% trans "Shop name" %}</p>-->
-                <div class="list-group">
-                    {% for top in top_list %}
-                        <!--Выпадающий список
-                        <div class="dropdown">
-                          <a href="{{top.get_url}}" data-toggle="dropdown" class="list-group-item dropdown-toggle">
-                            {{top.name}}
-                            <b class="caret_right"></b>
-                          </a>
-                          <ul class="dropdown-menu open_left">
-                              {% for c in top.get_children %}
-                                  <li><a href="{{c.get_url}}">{{c.name}}</a></li>
-                              {% endfor %}
-                          </ul>
-                        </div>-->
-                      <a href="{{top.get_url}}" class="list-group-item">
-                        {{top.name}}
-                      </a>
-                      <ul class="left_menu">
-                          {% for c in top.get_children %}
-                              <li ><a class="list-group-item list-group-item-sub" href="{{top.get_url}}#{{c.pk}}">{{c.name}}</a></li>
-                          {% endfor %}
-                      </ul>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="col-md-9">
-
-                <div class="row">
-                    <!--
-                    {% block breadcrumbs %}
-                    <ol class="breadcrumb">
-                        <li class="active">Главная</li>
-                    </ol>
-                    {% endblock %}
-                    -->
-                    {% block main %}
-                    {% endblock %}
-                </div>
-
-            </div>
-
+            {% block main %}
+            {% endblock %}
         </div>
     </div>
     <div class="container">

@@ -1,6 +1,21 @@
 {% extends "main.html" %}
 {% load bbcode_tags %}
 {% block main %}
+<div class="col-md-3">
+    <div class="list-group">
+        {% for top in top_list %}
+          <a href="{{top.get_url}}" class="list-group-item">
+            {{top.name}}
+          </a>
+          <ul class="left_menu">
+              {% for c in top.get_children %}
+                  <li ><a class="list-group-item list-group-item-sub" href="{{top.get_url}}#{{c.pk}}">{{c.name}}</a></li>
+              {% endfor %}
+          </ul>
+        {% endfor %}
+    </div>
+</div>
+<div class="col-md-9">
     <h1>{{object.name}}</h1>
     {% for c in object.get_children %}
         <h2 id="{{c.pk}}">{{c.name}}</h2>
@@ -18,4 +33,5 @@
         <a href="{% url "start_senior_test" pk=object.pk %}" class="btn btn-warning">Тест "Любитель"</a>
         <a href="{% url "start_profi_test" pk=object.pk %}" class="btn btn-danger">Тест "Профессионал"</a>
     </div>
+</div>
 {% endblock %}

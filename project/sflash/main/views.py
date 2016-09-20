@@ -1,6 +1,17 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from theory.models import Theory
+from django.views.generic.base import TemplateView
+from django.views.generic.list import ListView
+from main.models import Material
+
+class MainPageView(TemplateView):
+    template_name = 'index.html'
+
+class MaterialView(ListView):
+    template_name = 'material.html'
+    model = Material
+    paginate_by = 100
 
 # Create your views here.
 def main_view(request):

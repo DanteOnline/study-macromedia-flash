@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+{% block main %}
+    <!-- Jumbotron Header -->
+    <header class="jumbotron hero-spacer">
+        <h1>Macromedia Flash</h1>
+        <p>Macromedia Flash — мультимедийная платформа компании Adobe Systems для создания веб-приложений или мультимедийных презентаций. Широко используется для создания рекламных баннеров, анимации, игр, а также воспроизведения на веб-страницах видео- и аудиозаписей.</p>
+        <p>Macromedia Flash позволяет работать с векторной, растровой и с трёхмерной графикой, используя при этом графический процессор, а также поддерживает двунаправленную потоковую трансляцию аудио и видео. Для КПК и других мобильных устройств выпущена специальная «облегчённая» версия платформы Flash Lite, функциональность которой ограничена в расчёте на возможности мобильных устройств и их операционных систем.</p>
+        </header>
+
+    <hr>
+
+    <!-- Title -->
+
+    <!-- /.row -->
+
+    <!-- Page Features -->
+    <div class="row text-center">
+        <div class="col-md-4 hero-feature">
+            <div class="thumbnail">
+                <div >
+                    <h3>Теория</h3>
+                    <p>Ознакомьтесь с краткой теорией на нашем сайте</p>
+                    <p>
+                        <a href="{% url "theory" pk=1 %}" class="btn btn-primary">К теории</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 hero-feature">
+            <div class="thumbnail">
+                <div >
+                    <h3>Тесты</h3>
+                    <p>Пройдите тесты, проверьте свои знания</p>
+                    <p>
+                        <a href="{% url "test_index" %}" class="btn btn-primary">К тестам</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 hero-feature">
+            <div class="thumbnail">
+                <div >
+                    <h3>Материалы</h3>
+                    <p>Скачайте подробные материалы</p>
+                    <p>
+                        <a href="{% url "material" %}" class="btn btn-primary">К материалам</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+{% endblock %}

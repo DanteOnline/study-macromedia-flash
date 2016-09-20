@@ -25,7 +25,7 @@ SECRET_KEY = 'p#ofstgmn*qnyy-@-_=3nxi$r-abyukii#l@)lbb5h#ze+(z*m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gamesflashtest.pythonanywhere.com']
 
 
 # Application definition

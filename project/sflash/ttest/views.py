@@ -177,7 +177,6 @@ class ProfiFormView(FormView, TheoryMixin):
         current_question_pk = self.request.session['questions_pks'][current_index]
         question = ProfiQuestion.objects.get(pk=current_question_pk)
         context['question'] = question
-        context['answers'] = self.request.session['answers']
         return context
 
     def form_valid(self, form):
@@ -204,7 +203,6 @@ class JuniorTemplateView(TemplateView, TheoryMixin):
         current_question_pk = self.request.session['questions_pks'][current_index]
         question = JuniorQuestion.objects.get(pk=current_question_pk)
         context['question'] = question
-        context['answers'] = self.request.session['answers']
         junior_answers = JuniorAnswer.objects.filter(question=question)
         context['junior_answers'] = junior_answers
         return context
@@ -233,7 +231,6 @@ class SeniorTemplateView(TemplateView, TheoryMixin):
         current_question_pk = self.request.session['questions_pks'][current_index]
         question = SeniorQuestion.objects.get(pk=current_question_pk)
         context['question'] = question
-        context['answers'] = self.request.session['answers_pks']
         senior_answers = SeniorAnswer.objects.filter(question=question)
         context['senior_answers'] = senior_answers
         return context

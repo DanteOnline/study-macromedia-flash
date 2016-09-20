@@ -191,6 +191,7 @@ class ProfiFormView(FormView, TheoryMixin):
             self.request.session['current_index'] = current_index
             return redirect('profi_form',pk=questions_pks[current_index])
         else:
+            self.request.session.modified = True
             return redirect('end_profi_test')
 
 class JuniorTemplateView(TemplateView, TheoryMixin):
@@ -219,6 +220,7 @@ class JuniorTemplateView(TemplateView, TheoryMixin):
             self.request.session['current_index'] = current_index
             return redirect('junior_form', pk=questions_pks[current_index])
         else:
+            request.session.modified = True
             return redirect('end_junior_test')
 
 class SeniorTemplateView(TemplateView, TheoryMixin):
@@ -247,6 +249,7 @@ class SeniorTemplateView(TemplateView, TheoryMixin):
             self.request.session['current_index'] = current_index
             return redirect('senior_form', pk=questions_pks[current_index])
         else:
+            request.session.modified = True
             return redirect('end_senior_test')
 
 class TestMainView(TemplateView, TheoryMixin):

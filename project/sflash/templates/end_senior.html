@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 {% block main %}
-    <h1>{{theory.name}} - Тест "Новичок"</h1>
+    <h1>{{theory.name}} - Тест "Любитель"</h1>
     {% for qa in qas %}
         <div class="col-md-12">
             <div class="{% if qa.is_true %}thumbnail-tr{% else %}thumbnail-er{% endif %}">
@@ -20,7 +20,9 @@
                         {% if qa.is_true %}ВЕРНО{% else %}НЕ ВЕРНО{% endif %}
                     </p>
                     <p>
-                        {{qa.answer}}
+                        {% for a in qa.answer %}
+                            {{a.text}},
+                        {% endfor %}
                     </p>
                 </div>
             </div>
@@ -31,13 +33,12 @@
         <h3>Ваш результат: {{count}} верных ответов из {{tru_count}}</h3>
         <p></p>
         {% if ok %}
-            <h2>Поздравляем вы успешно прошли тест уровня Новичок</h2>
-            <a href="{% url "start_senior_test" pk=theory.pk %}" class="btn btn-warning">Пройти тест "Любитель"</a>
+            <h2>Поздравляем вы успешно прошли тест уровня Любитель</h2>
             <a href="{% url "start_profi_test" pk=theory.pk %}" class="btn btn-danger">Пройти тест "Профессионал"</a>
         {% else %}
-            <h2>К сожалению, вы не прошли тест уровня Новичок</h2>
+            <h2>К сожалению, вы не прошли тест уровня Любитель</h2>
         <a href="{{theory.get_url}}" class="btn btn-info">Вернуться к теории</a>
-        <a href="{% url "start_junior_test" pk=theory.pk %}" class="btn btn-success">Попробовать снова</a>
+        <a href="{% url "start_senior_test" pk=theory.pk %}" class="btn btn-warning">Попробовать снова</a>
         {% endif %}
     </div>
 {% endblock %}

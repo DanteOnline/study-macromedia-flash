@@ -1,19 +1,12 @@
 {% extends "main.html" %}
 {% block main %}
-    <h1>{{theory.name}} - Тест "Новичок"</h1>
+    <h1>{{theory.name}} - Тест "Профессионал"</h1>
     {% for qa in qas %}
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="{% if qa.is_true %}thumbnail-tr{% else %}thumbnail-er{% endif %}">
                 {{qa.is_tue}}
                 <div class="caption">
                     <p>{{qa.question.text}}</p>
-                    <ul>
-                        {% for a in qa.question.get_answers %}
-                        <li>
-                            {{a.text}}
-                        </li>
-                        {% endfor %}
-                    </ul>
                 </div>
                 <div class="ratings">
                     <p class="pull-right {% if qa.is_true %}res-tr{% else %}res-er{% endif %}">
@@ -31,13 +24,11 @@
         <h3>Ваш результат: {{count}} верных ответов из {{tru_count}}</h3>
         <p></p>
         {% if ok %}
-            <h2>Поздравляем вы успешно прошли тест уровня Новичок</h2>
-            <a href="{% url "start_senior_test" pk=theory.pk %}" class="btn btn-warning">Пройти тест "Любитель"</a>
-            <a href="{% url "start_profi_test" pk=theory.pk %}" class="btn btn-danger">Пройти тест "Профессионал"</a>
+            <h2>Поздравляем вы успешно прошли тест уровня Профессионал</h2>
         {% else %}
-            <h2>К сожалению, вы не прошли тест уровня Новичок</h2>
+            <h2>К сожалению, вы не прошли тест уровня Профессионал</h2>
         <a href="{{theory.get_url}}" class="btn btn-info">Вернуться к теории</a>
-        <a href="{% url "start_junior_test" pk=theory.pk %}" class="btn btn-success">Попробовать снова</a>
+        <a href="{% url "start_profi_test" pk=theory.pk %}" class="btn btn-danger">Попробовать снова</a>
         {% endif %}
     </div>
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block main %}
+<div class="question">
+    <h2>Вопрос №{{number}}</h2>
+    {{question.text}}
+</div>
+<form action="" method="post" id="junior_form">
+    {% for j in junior_answers %}
+        <input type="radio" name="j" value="{{j.pk}}" {% if forloop.first %}checked{% endif %}>{{j.text}}<br>
+    {% endfor %}
+    {% csrf_token %}
+    <hr>
+    <button type="submit" class="btn btn-primary">Далее</button>
+</form>
+{% endblock %}

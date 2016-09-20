@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block main %}
+    {% for top in top_list %}
+        <h2>{{top.name}}</h2>
+        <a href="{% url "start_junior_test" pk=top.pk %}" class="btn btn-success">Тест "Новичок"</a>
+        <a href="{% url "start_senior_test" pk=top.pk %}" class="btn btn-warning">Тест "Любитель"</a>
+        <a href="{% url "start_profi_test" pk=top.pk %}" class="btn btn-danger">Тест "Профессионал"</a>
+    {% endfor %}
+{% endblock %}

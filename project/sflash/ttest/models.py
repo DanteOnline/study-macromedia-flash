@@ -6,6 +6,9 @@ class JuniorQuestion(models.Model):
     text = models.CharField(max_length=300)
     theme = models.ForeignKey(Theory)
 
+    def get_answers(self):
+        return JuniorAnswer.objects.filter(question = self)
+
     def __str__(self):
         return self.text
 
@@ -20,6 +23,9 @@ class JuniorAnswer(models.Model):
 class SeniorQuestion(models.Model):
     text = models.CharField(max_length=200)
     theme = models.ForeignKey(Theory)
+
+    def get_answers(self):
+        return SeniorAnswer.objects.filter(question = self)
 
     def __str__(self):
         return self.text
@@ -39,5 +45,11 @@ class ProfiQuestion(models.Model):
 
     def __str__(self):
         return self.text
+
+class QuestionAnswer:
+    def __init__(self, question, answer):
+        self.question = question
+        self.answer = answer
+        self.is_true = False
 
 

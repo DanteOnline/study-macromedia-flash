@@ -8,8 +8,8 @@ def main_view(request):
 
 def change_image_host(request):
     old_host = 'http://127.0.0.1:8000/'
-    #new_host = 'http://gamesflashtest.pythonanywhere.com/'
-    new_host = 'http://127.0.0.1:8000/'
+    new_host = 'http://gamesflashtest.pythonanywhere.com/'
+    #new_host = 'http://127.0.0.1:8000/'
 
     all_theory = Theory.objects.all()
     for t in all_theory:

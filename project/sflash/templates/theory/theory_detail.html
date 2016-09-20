@@ -14,5 +14,8 @@
     {% endfor %}
     <div class="but">
         <a href="{{object.tfile.url}}" class="btn btn-info">Скачать теорию .docx</a>
+        <a href="{% url "start_junior_test" pk=object.pk %}" class="btn btn-success">Тест "Новичок"</a>
+        <a href="{% url "start_junior_test" pk=object.pk %}" class="btn btn-warning">Тест "Любитель"</a>
+        <a href="{% url "start_junior_test" pk=object.pk %}" class="btn btn-danger">Тест "Профессионал"</a>
     </div>
 {% endblock %}

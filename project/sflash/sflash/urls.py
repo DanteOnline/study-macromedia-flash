@@ -20,5 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^theory', include('theory.urls'))
+    url(r'^theory/', include('theory.urls')),
+    url(r'^', include('main.urls')),
+    url(r'^test/', include('ttest.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

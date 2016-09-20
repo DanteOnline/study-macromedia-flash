@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_cleanup',
     'theory',
-    'precise_bbcode'
+    'precise_bbcode',
+    'main',
+    'ttest'
 ]
 
 MIDDLEWARE_CLASSES = [

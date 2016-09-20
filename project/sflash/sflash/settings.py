@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p#ofstgmn*qnyy-@-_=3nxi$r-abyukii#l@)lbb5h#ze+(z*m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['gamesflashtest.pythonanywhere.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gamesflashtest.pythonanywhere.com']
+#ALLOWED_HOSTS = []
 
 
 # Application definition

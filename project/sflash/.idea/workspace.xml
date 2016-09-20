@@ -20,7 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -40,16 +40,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theory_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/theory/theory_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="35" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,6 +48,26 @@
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sflash/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1116">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sflash/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,16 +87,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="26" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sflash/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -160,8 +160,6 @@
         <option value="$PROJECT_DIR$/templates/test_index.html" />
         <option value="$PROJECT_DIR$/ttest/urls.py" />
         <option value="$PROJECT_DIR$/ttest/views.py" />
-        <option value="$PROJECT_DIR$/sflash/settings.py" />
-        <option value="$PROJECT_DIR$/sflash/urls.py" />
         <option value="$PROJECT_DIR$/templates/theory/theory_detail.html" />
         <option value="$PROJECT_DIR$/main/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -170,6 +168,8 @@
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/templates/material.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/sflash/settings.py" />
+        <option value="$PROJECT_DIR$/sflash/urls.py" />
       </list>
     </option>
   </component>
@@ -912,22 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sflash/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sflash/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/theory/theory_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1002,6 +986,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sflash/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1116">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sflash/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
           <folding />
         </state>
       </provider>
